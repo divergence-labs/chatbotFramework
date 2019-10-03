@@ -31,7 +31,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <p>1. Please login dialogflow using below-mentioned link and on successful login navigate to the console. <br/> &nbsp;&nbsp; &nbsp; https://dialogflow.com
+      return <p>1. Please login dialogflow using below-mentioned link and on successful login navigate to the console. <br/> &nbsp;&nbsp; &nbsp; <a href="https://dialogflow.com">https://dialogflow.com</a>
               <br/>
               <br/>
               2. Create a new agent to start with NLP service.
@@ -47,7 +47,7 @@ function getStepContent(step) {
               </p>;
     case 2:
       return  <p>
-        1. git clone https://github.com/anantha-marlabs/chatbotComponent.git
+        1. git clone <a href="https://github.com/anantha-marlabs/chatbotComponent.git">https://github.com/anantha-marlabs/chatbotComponent.git</a>
         <br/><br/>
         2. npm install
         <br/><br/>
@@ -61,7 +61,7 @@ function getStepContent(step) {
         <br/><br/>
         <img src= 'https://chatbot-platform.azurewebsites.net/images/dialogflow_snippet.png ' height ="100px" alt=''></img>
         <br/><br/>
-      2. Done. You are ready to use a chatbot
+      2. Done. You are ready to use the chatbot.
 
       </p>
     default:
