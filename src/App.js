@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Widget, addResponseMessage} from 'react-chat-widget';
-
 import 'react-chat-widget/lib/styles.css';
- 
-import logo from './logo.svg';
- 
+
 class App extends Component {
         constructor(props) {
 		    super(props);
@@ -55,9 +52,9 @@ class App extends Component {
       <div className="App">
         <Widget
           handleNewUserMessage={this.handleNewUserMessage}
-          profileAvatar={logo}
-          title="Chatbot Framework"
-          subtitle="Explore the digital world"
+          profileAvatar={'https://chatbot-platform.azurewebsites.net/images/bot.png'}
+          title="First Connect"
+          subtitle="Oh My BOT !!!"
         />
       </div>
     );

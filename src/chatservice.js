@@ -6,10 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import axios from 'axios';
-
+import App from './App'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -51,6 +52,11 @@ function handlefile(e){
   handleUpload(file)
 }
 
+function handledocumentation(){
+
+  window.location = "./documentation";
+}
+
 function handleUpload(file){
   console.log(file);
   let formData = new FormData();
@@ -81,25 +87,27 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            ChatBot Framework
           </Typography>
+          <Button color="inherit" onClick={handledocumentation}>Documentation</Button>
           <Button color="inherit" onClick={handleOpen}>Settings</Button>
           <Modal
         aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+        aria-describedby="simple-modal-description" 
         open={open}
         onClose={handleClose}
       >
         <div style={modalStyle} className={classesforModal.paper}>
+        <p> <b>DialogFlow Configuration File</b></p><br/>
          <label> Select File </label>
          <input type ="file" name = "file" onChange={(e) => handlefile(e)}></input><br></br>
         </div>
       </Modal>
         </Toolbar>
       </AppBar>
+      <App/>
     </div>  
   );
 }
